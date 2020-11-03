@@ -30,5 +30,8 @@ Relevant files are:
 * CityGML-Data-Dictionary.xml: EA template for generating the Data Dictionaries
 * Summary-Tables.xml: EA template for generating the Summary Tables.
 
+Note that since EA does not have a text output option, cut and paste was used to transfer the RTF content from Word into AsciiDoc format using AsciiDocFX. Since the RTF includes the AsciiDoc formatting, no changes to the content were required.
+
+
 
 
