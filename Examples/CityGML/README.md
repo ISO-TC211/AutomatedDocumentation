@@ -32,6 +32,13 @@ Relevant files are:
 
 Note that since EA does not have a text output option, cut and paste was used to transfer the RTF content from Word into AsciiDoc format using AsciiDocFX. Since the RTF includes the AsciiDoc formatting, no changes to the content were required.
 
+## Shell Scripts and Templates
 
+Since the requirements were mostly the same for each package, we elected to write them once as templates then generate the individual requirement files using shell scripts. The same approach was used for the associated abstract tests. 
+
+* Templates contains the templates for requirements and abstract tests,
+* REQ-gen.sh generates the requirements for each package,
+* ATS-gen.sh generates the abstract tests for each package.
+* 
 
 
