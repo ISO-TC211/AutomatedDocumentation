@@ -10,9 +10,12 @@
 					</Apply>
 				</AppliesTo>
 				<TaggedValues>
-					<Tag name="identifier" type="URI" description="identifier which references elsewhere the object's defining information; alternatively an identifier by which this object can be referenced" unit="" values="" default=""/>
-					<Tag name="executableStatement" type="CharacterString" description="comments on or information about this object, including data source information" unit="" values="" default=""/>
+					<Tag name="URI" type="URI" description="identifier which references elsewhere the object's defining information; alternatively an identifier by which this object can be referenced" unit="" values="" default=""/>
+					<Tag name="text" type="CharacterString" description="" unit="" values="" default=""/>
 					<Tag name="externalReference" type="URI" description="reference to an external description" unit="" values="" default=""/>
+					<Tag name="testPurpose" type="CharacterString" description="comments on or information about this object, including data source information" unit="" values="" default=""/>
+					<Tag name="testMethod" type="CharacterString" description="comments on or information about this object, including data source information" unit="" values="" default=""/>
+					<Tag name="testType" type="CharacterString" description="comments on or information about this object, including data source information" unit="" values="" default=""/>
 				</TaggedValues>
 			</Stereotype>
 			<Stereotype name="AbstractTestSuite" notes="" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
@@ -43,8 +46,8 @@
 					</Apply>
 				</AppliesTo>
 				<TaggedValues>
-					<Tag name="identifier" type="URI" description="identifier which references elsewhere the object's defining information; alternatively an identifier by which this object can be referenced" unit="" values="" default=""/>
-					<Tag name="executableStatement" type="CharacterString" description="comments on or information about this object, including data source information" unit="" values="" default=""/>
+					<Tag name="URI" type="URI" description="identifier which references elsewhere the object's defining information; alternatively an identifier by which this object can be referenced" unit="" values="" default=""/>
+					<Tag name="text" type="CharacterString" description="" unit="" values="" default=""/>
 					<Tag name="externalReference" type="URI" description="reference to an external description" unit="" values="" default=""/>
 				</TaggedValues>
 			</Stereotype>
@@ -55,8 +58,8 @@
 					</Apply>
 				</AppliesTo>
 				<TaggedValues>
-					<Tag name="identifier" type="URI" description="identifier which references elsewhere the object's defining information; alternatively an identifier by which this object can be referenced" unit="" values="" default=""/>
-					<Tag name="executableStatement" type="CharacterString" description="comments on or information about this object, including data source information" unit="" values="" default=""/>
+					<Tag name="URI" type="URI" description="identifier which references elsewhere the object's defining information; alternatively an identifier by which this object can be referenced" unit="" values="" default=""/>
+					<Tag name="text" type="CharacterString" description="" unit="" values="" default=""/>
 					<Tag name="externalReference" type="URI" description="reference to an external description" unit="" values="" default=""/>
 				</TaggedValues>
 			</Stereotype>
@@ -67,8 +70,8 @@
 					</Apply>
 				</AppliesTo>
 				<TaggedValues>
-					<Tag name="identifier" type="URI" description="identifier which references elsewhere the object's defining information; alternatively an identifier by which this object can be referenced" unit="" values="" default=""/>
-					<Tag name="executableStatement" type="CharacterString" description="comments on or information about this object, including data source information" unit="" values="" default=""/>
+					<Tag name="URI" type="URI" description="identifier which references elsewhere the object's defining information; alternatively an identifier by which this object can be referenced" unit="" values="" default=""/>
+					<Tag name="text" type="CharacterString" description="" unit="" values="" default=""/>
 					<Tag name="externalReference" type="URI" description="reference to an external description" unit="" values="" default=""/>
 				</TaggedValues>
 			</Stereotype>
