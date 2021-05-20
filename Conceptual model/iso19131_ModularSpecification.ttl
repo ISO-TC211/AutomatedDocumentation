@@ -1,0 +1,456 @@
+# baseURI: https://standards.isotc211.org/iso19131/-/2/ModularSpecification
+# imports: http://def.isotc211.org/iso19105/2021/ModularSpecification
+
+@prefix : <https://standards.isotc211.org/iso19131/-/2/> .
+@prefix msp: <http://def.isotc211.org/iso19105/2021/ModularSpecification#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix untitled-ontology-4: <http://www.semanticweb.org/knjetl/ontologies/2021/4/untitled-ontology-4#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+rdf:langString
+  rdf:type rdfs:Datatype ;
+.
+<https://standards.isotc211.org/19131/-/2/rec/optionalContent/contentapplication>
+  rdf:type msp:Recommendation ;
+  rdf:type owl:NamedIndividual ;
+  msp:URI "https://standards.isotc211.org/19131/-/2/rec/optionalContent/contentapplication"^^xsd:anyURI ;
+  msp:name "contentapplication"^^xsd:Name ;
+  msp:text "When an application schema is provided, it should be conformant with the rules in ISO 19109." ;
+.
+<https://standards.isotc211.org/19131/-/2/rec/optionalContent/contentcomplete>
+  rdf:type msp:Recommendation ;
+  rdf:type owl:NamedIndividual ;
+  msp:URI "https://standards.isotc211.org/19131/-/2/rec/optionalContent/contentcomplete"^^xsd:anyURI ;
+  msp:name "contentcomplete"^^xsd:Name ;
+  msp:text "When application schemas are provided, the application schemas should cover the complete data product." ;
+.
+<https://standards.isotc211.org/19131/-/2/rec/optionalContent/contentcoverage>
+  rdf:type msp:Recommendation ;
+  rdf:type owl:NamedIndividual ;
+  msp:URI "https://standards.isotc211.org/19131/-/2/rec/optionalContent/contentcoverage"^^xsd:anyURI ;
+  msp:name "contentcoverage"^^xsd:Name ;
+  msp:text "When a coverage description is provided, it should be realized in accordance with ISO 19123." ;
+.
+<https://standards.isotc211.org/19131/-/2/rec/optionalContent/contentfeatures>
+  rdf:type msp:Recommendation ;
+  rdf:type owl:NamedIndividual ;
+  msp:URI "https://standards.isotc211.org/19131/-/2/rec/optionalContent/contentfeatures"^^xsd:anyURI ;
+  msp:name "contentfeatures"^^xsd:Name ;
+  msp:text "When a feature catalogue is provided, it should be realized in accordance with ISO 19110." ;
+.
+<https://standards.isotc211.org/19131/-/2/rec/optionalContent/dps-layout>
+  rdf:type msp:Recommendation ;
+  rdf:type owl:NamedIndividual ;
+  msp:URI "https://standards.isotc211.org/19131/-/2/rec/optionalContent/dps-layout"^^xsd:anyURI ;
+  msp:name "dps-layout"^^xsd:Name ;
+  msp:text """A data product specification instance where human readability is prioritized, may be arranged in the following order:
+— abstract, keywords, topic categories and extent of the data product, for quick evaluation, as specified in 6.3.2.4, 6.3.2.6, 6.3.2.11 and 6.3.2.13;
+— about the data product specification, as specified in 6.2.7 and 6.2.8;
+— terms and abbreviations, as specified in 6.2.9 and 6.2.10;
+— identification section, as specified in 6.3;
+— scope section, as specified in 6.4;
+— data content and structure section, as specified in 6.5;
+— reference systems section, as specified in 6.6;
+— data quality section, as specified in 6.7;
+— data capture and production section, as specified in 6.8;
+— data maintenance section, as specified in 6.9;
+— portrayal section, as specified in 6.10;
+— delivery section, as specified in 6.11;
+— metadata section, as specified in 6.12;
+— additional information section, issues not covered by other clauses, as specified in 6.13.""" ;
+.
+<https://standards.isotc211.org/19131/-/2/rec/optionalContent/metadataminimum>
+  rdf:type msp:Recommendation ;
+  rdf:type owl:NamedIndividual ;
+  msp:URI "https://standards.isotc211.org/19131/-/2/rec/optionalContent/metadataminimum"^^xsd:anyURI ;
+  msp:name "metadataminimum"^^xsd:Name ;
+  msp:text "The data product specification should at least specify that metadata about the owner of the data product and when the data product was last updated, shall be included in the metadata for the data product." ;
+.
+<https://standards.isotc211.org/19131/-/2/rec/optionalContent/useCase>
+  rdf:type msp:Recommendation ;
+  rdf:type owl:NamedIndividual ;
+  msp:URI "https://standards.isotc211.org/19131/-/2/rec/optionalContent/useCase"^^xsd:anyURI ;
+  msp:name "useCase"^^xsd:Name ;
+  msp:text "To increase potential users’ understanding of what purposes the data product serves, the data product specification should provide use case(s)." ;
+.
+<https://standards.isotc211.org/19131/-/2/req/content/additional-content>
+  rdf:type msp:Requirement ;
+  rdf:type owl:NamedIndividual ;
+  msp:URI "https://standards.isotc211.org/19131/-/2/req/content/additional-content"^^xsd:anyURI ;
+  msp:name "additional-content"^^xsd:Name ;
+  msp:text "The additional information section shall not contain information covered elsewhere in the data product specification." ;
+.
+<https://standards.isotc211.org/19131/-/2/req/content/additional-model>
+  rdf:type msp:Requirement ;
+  rdf:type owl:NamedIndividual ;
+  msp:URI "https://standards.isotc211.org/19131/-/2/req/content/additional-model"^^xsd:anyURI ;
+  msp:name "additional-model"^^xsd:Name ;
+  msp:text "The additional information section shall conform to the model described in Figure 26. An object of the class AdditionalInformation shall specify information for a certain specification scope." ;
+.
+<https://standards.isotc211.org/19131/-/2/req/content/capture-model>
+  rdf:type msp:Requirement ;
+  rdf:type owl:NamedIndividual ;
+  msp:URI "https://standards.isotc211.org/19131/-/2/req/content/capture-model"^^xsd:anyURI ;
+  msp:name "capture-model"^^xsd:Name ;
+  msp:text "The data capture and production section shall be in accordance with the UML model in Figure 16. An object of the class DataCaptureAndProduction shall specify information for a certain specification scope of the data product." ;
+.
+<https://standards.isotc211.org/19131/-/2/req/content/capture-scope>
+  rdf:type msp:Requirement ;
+  rdf:type owl:NamedIndividual ;
+  msp:URI "https://standards.isotc211.org/19131/-/2/req/content/capture-scope"^^xsd:anyURI ;
+  msp:name "capture-scope"^^xsd:Name ;
+  msp:text "For all instances of the DataCaptureAndProduction class, the union of the scopes defined in each of the associated SpecificationScope objects shall cover all the spatial, temporal and semantic extent of the data product." ;
+.
+<https://standards.isotc211.org/19131/-/2/req/content/content-model>
+  rdf:type msp:Requirement ;
+  rdf:type owl:NamedIndividual ;
+  msp:URI "https://standards.isotc211.org/19131/-/2/req/content/content-model"^^xsd:anyURI ;
+  msp:name "content-model"^^xsd:Name ;
+  msp:text "The data content and structure section shall be in accordance with the UML model in Figure 10, where each object of class DataContentAndStructure shall, for a specified specification scope, provide MD_ApplicationSchemaInformation or one or more of the subclasses of MD_ContentInformation." ;
+.
+<https://standards.isotc211.org/19131/-/2/req/content/content-scope>
+  rdf:type msp:Requirement ;
+  rdf:type owl:NamedIndividual ;
+  msp:URI "https://standards.isotc211.org/19131/-/2/req/content/content-scope"^^xsd:anyURI ;
+  msp:name "content-scope"^^xsd:Name ;
+  msp:text "For all instances of the DataContentAndStructure class, the union of the scopes defined in each of the associated SpecificationScope objects shall cover all the spatial, temporal and semantic extent of the data product." ;
+.
+<https://standards.isotc211.org/19131/-/2/req/content/delivery-model>
+  rdf:type msp:Requirement ;
+  rdf:type owl:NamedIndividual ;
+  msp:URI "https://standards.isotc211.org/19131/-/2/req/content/delivery-model"^^xsd:anyURI ;
+  msp:name "delivery-model"^^xsd:Name ;
+  msp:text "The data product delivery section shall conform to the UML model described in Figure 22. An object of the class Delivery shall specify information for a certain specification scope of the data product." ;
+.
+<https://standards.isotc211.org/19131/-/2/req/content/delivery-scope>
+  rdf:type msp:Requirement ;
+  rdf:type owl:NamedIndividual ;
+  msp:URI "https://standards.isotc211.org/19131/-/2/req/content/delivery-scope"^^xsd:anyURI ;
+  msp:name "delivery-scope"^^xsd:Name ;
+  msp:text "For all instances of the Delivery class, the union of the scopes defined in each of the associated SpecificationScope objects shall cover all the spatial, temporal and semantic extent of the data product." ;
+.
+<https://standards.isotc211.org/19131/-/2/req/content/delivery-specification>
+  rdf:type msp:Requirement ;
+  rdf:type owl:NamedIndividual ;
+  msp:URI "https://standards.isotc211.org/19131/-/2/req/content/delivery-specification"^^xsd:anyURI ;
+  msp:name "delivery-specification"^^xsd:Name ;
+  msp:text "If the specified data product is delivered via web services such as Web Map Service (WMS) and Web Feature Service (WFS) interfaces, the specific web service profile to be used shall be referenced." ;
+.
+<https://standards.isotc211.org/19131/-/2/req/content/extent>
+  rdf:type msp:Requirement ;
+  rdf:type owl:NamedIndividual ;
+  msp:URI "https://standards.isotc211.org/19131/-/2/req/content/extent"^^xsd:anyURI ;
+  msp:name "extent"^^xsd:Name ;
+  msp:text "For the attribute extent there shall always exist at least one instance describing the geographic area using subtype EX_GeographicExtent of EX_Extent." ;
+.
+<https://standards.isotc211.org/19131/-/2/req/content/identification-model>
+  rdf:type msp:Requirement ;
+  rdf:type owl:NamedIndividual ;
+  msp:URI "https://standards.isotc211.org/19131/-/2/req/content/identification-model"^^xsd:anyURI ;
+  msp:name "identification-model"^^xsd:Name ;
+  msp:text "The identification section shall conform to the UML model described in Figure 5. A single object of the class IdentificationSection shall specify information for the entire data product by specifying a specification scope that comprises the entire data product." ;
+.
+<https://standards.isotc211.org/19131/-/2/req/content/maintenance-model>
+  rdf:type msp:Requirement ;
+  rdf:type owl:NamedIndividual ;
+  msp:URI "https://standards.isotc211.org/19131/-/2/req/content/maintenance-model"^^xsd:anyURI ;
+  msp:name "maintenance-model"^^xsd:Name ;
+  msp:text "The data maintenance section shall conform to the UML model described in Figure 18. An object of the class Maintenance shall specify information for a certain specification scope of the data product." ;
+.
+<https://standards.isotc211.org/19131/-/2/req/content/maintenance-scope>
+  rdf:type msp:Requirement ;
+  rdf:type owl:NamedIndividual ;
+  msp:URI "https://standards.isotc211.org/19131/-/2/req/content/maintenance-scope"^^xsd:anyURI ;
+  msp:name "maintenance-scope"^^xsd:Name ;
+  msp:text "For all instances of the Maintenance class, the union of the scopes defined in each of the associated SpecificationScope objects shall cover all the spatial, temporal and semantic extent of the data product." ;
+.
+<https://standards.isotc211.org/19131/-/2/req/content/maintenanceupdateFrequency>
+  rdf:type msp:Requirement ;
+  rdf:type owl:NamedIndividual ;
+  msp:URI "https://standards.isotc211.org/19131/-/2/req/content/maintenanceupdateFrequency"^^xsd:anyURI ;
+  msp:name "maintenanceupdateFrequency"^^xsd:Name ;
+  msp:text "The attribute userDefinedMaintenanceAndUpdateFrequency shall only be used if none of the predefined codes in MD_MaintenanceFrequenceCode matches the update frequency for the data product." ;
+.
+<https://standards.isotc211.org/19131/-/2/req/content/metadata-model>
+  rdf:type msp:Requirement ;
+  rdf:type owl:NamedIndividual ;
+  msp:URI "https://standards.isotc211.org/19131/-/2/req/content/metadata-model"^^xsd:anyURI ;
+  msp:name "metadata-model"^^xsd:Name ;
+  msp:text "Information in the metadata section shall conform to the model described in Figure 24. An object of class Metadata shall specify information for a certain specification scope of the data product." ;
+.
+<https://standards.isotc211.org/19131/-/2/req/content/metadata-scope>
+  rdf:type msp:Requirement ;
+  rdf:type owl:NamedIndividual ;
+  msp:URI "https://standards.isotc211.org/19131/-/2/req/content/metadata-scope"^^xsd:anyURI ;
+  msp:name "metadata-scope"^^xsd:Name ;
+  msp:text "For all instances of the Metadata class, the union of the scopes defined in each of the associated SpecificationScope objects shall cover all the spatial, temporal and semantic extent of the data product." ;
+.
+<https://standards.isotc211.org/19131/-/2/req/content/portrayal-model>
+  rdf:type msp:Requirement ;
+  rdf:type owl:NamedIndividual ;
+  msp:URI "https://standards.isotc211.org/19131/-/2/req/content/portrayal-model"^^xsd:anyURI ;
+  msp:name "portrayal-model"^^xsd:Name ;
+  msp:text "Information in the portrayal section shall conform to the model described in Figure 20. An object of the class Portrayal shall provide references to portrayal specifications for a certain specification scope." ;
+.
+<https://standards.isotc211.org/19131/-/2/req/content/portrayal-scope>
+  rdf:type msp:Requirement ;
+  rdf:type owl:NamedIndividual ;
+  msp:URI "https://standards.isotc211.org/19131/-/2/req/content/portrayal-scope"^^xsd:anyURI ;
+  msp:name "portrayal-scope"^^xsd:Name ;
+  msp:text "For all instances of the Portrayal class, the union of the scopes defined in each of the associated SpecificationScope objects shall cover all the spatial, temporal and semantic extent of the data product." ;
+.
+<https://standards.isotc211.org/19131/-/2/req/content/quality-level>
+  rdf:type msp:Requirement ;
+  rdf:type owl:NamedIndividual ;
+  msp:URI "https://standards.isotc211.org/19131/-/2/req/content/quality-level"^^xsd:anyURI ;
+  msp:name "quality-level"^^xsd:Name ;
+  msp:text """A conformance quality level shall be specified as either:
+— a data quality measure and a value that expresses what is acceptable for that data quality measure, or
+— as a descriptive statement about a data quality element.""" ;
+.
+<https://standards.isotc211.org/19131/-/2/req/content/quality-model>
+  rdf:type msp:Requirement ;
+  rdf:type owl:NamedIndividual ;
+  msp:URI "https://standards.isotc211.org/19131/-/2/req/content/quality-model"^^xsd:anyURI ;
+  msp:name "quality-model"^^xsd:Name ;
+  msp:text """The data quality section shall be in accordance with the UML model in Figure 14, where each object of the class DataQuality shall provide information about a set of conformance quality levels and the specification scope for which these are applicable.
+A conformance quality level shall be specified by an object of class ConformanceQualityLevel with an attribute element to identify the appropriate data quality element which shall be in conformance with ISO 19157.""" ;
+.
+<https://standards.isotc211.org/19131/-/2/req/content/quality-scope>
+  rdf:type msp:Requirement ;
+  rdf:type owl:NamedIndividual ;
+  msp:URI "https://standards.isotc211.org/19131/-/2/req/content/quality-scope"^^xsd:anyURI ;
+  msp:name "quality-scope"^^xsd:Name ;
+  msp:text "For all instances of the DataQuality class, the union of the scopes defined in each of the associated SpecificationScope objects shall cover all the spatial, temporal and semantic extent of the data product." ;
+.
+<https://standards.isotc211.org/19131/-/2/req/content/reference-model>
+  rdf:type msp:Requirement ;
+  rdf:type owl:NamedIndividual ;
+  msp:URI "https://standards.isotc211.org/19131/-/2/req/content/reference-model"^^xsd:anyURI ;
+  msp:name "reference-model"^^xsd:Name ;
+  msp:text "The reference system section shall be in accordance with the UML model in Figure 12. An object of the class ReferenceSystem shall specify information for a certain specification scope of the data product." ;
+.
+<https://standards.isotc211.org/19131/-/2/req/content/reference-scope>
+  rdf:type msp:Requirement ;
+  rdf:type owl:NamedIndividual ;
+  msp:URI "https://standards.isotc211.org/19131/-/2/req/content/reference-scope"^^xsd:anyURI ;
+  msp:name "reference-scope"^^xsd:Name ;
+  msp:text "For all instances of the ReferenceSystem class, the union of the scopes defined in each of the associated SpecificationScope objects shall cover all the spatial, temporal and semantic extent of the data product." ;
+.
+<https://standards.isotc211.org/19131/-/2/req/content/scope-cover>
+  rdf:type msp:Requirement ;
+  rdf:type owl:NamedIndividual ;
+  msp:URI "https://standards.isotc211.org/19131/-/2/req/content/scope-cover"^^xsd:anyURI ;
+  msp:name "scope-cover"^^xsd:Name ;
+  msp:text "The union of the scopes defined in each of the SpecificationScope objects shall cover all the spatial, temporal and semantic extent of the data product." ;
+.
+<https://standards.isotc211.org/19131/-/2/req/content/scope-identification>
+  rdf:type msp:Requirement ;
+  rdf:type owl:NamedIndividual ;
+  msp:URI "https://standards.isotc211.org/19131/-/2/req/content/scope-identification"^^xsd:anyURI ;
+  msp:name "scope-identification"^^xsd:Name ;
+  msp:text "Each scopeIdentification shall be unique within the product specification." ;
+.
+<https://standards.isotc211.org/19131/-/2/req/content/scope-model>
+  rdf:type msp:Requirement ;
+  rdf:type owl:NamedIndividual ;
+  msp:URI "https://standards.isotc211.org/19131/-/2/req/content/scope-model"^^xsd:anyURI ;
+  msp:name "scope-model"^^xsd:Name ;
+  msp:text "The information describing a specification scope shall conform to the class SpecificationScope described in Figure 7, which shall specify the criteria." ;
+.
+<https://standards.isotc211.org/19131/-/2/req/content/specification-language>
+  rdf:type msp:Requirement ;
+  rdf:type owl:NamedIndividual ;
+  msp:URI "https://standards.isotc211.org/19131/-/2/req/content/specification-language"^^xsd:anyURI ;
+  msp:name "specification-language"^^xsd:Name ;
+  msp:text "A unique DataProductSpecification instance shall be used for each language a data product specification is written in." ;
+.
+<https://standards.isotc211.org/19131/-/2/req/content/specification-model>
+  rdf:type msp:Requirement ;
+  rdf:type owl:NamedIndividual ;
+  msp:URI "https://standards.isotc211.org/19131/-/2/req/content/specification-model"^^xsd:anyURI ;
+  msp:name "specification-model"^^xsd:Name ;
+  msp:text "A data product specification shall include sections and data in conformance to UML model in Figure 3." ;
+.
+<https://standards.isotc211.org/19131/-/2/req/content/specification-scope>
+  rdf:type msp:Requirement ;
+  rdf:type owl:NamedIndividual ;
+  msp:URI "https://standards.isotc211.org/19131/-/2/req/content/specification-scope"^^xsd:anyURI ;
+  msp:name "specification-scope"^^xsd:Name ;
+  msp:text """If more than one scope exists with the same level, a levelName shall be provided.
+If MD_ScopeCode is not sufficient, additional values should be supplied in levelDescription.""" ;
+.
+:ATS
+  rdf:type msp:AbstractTestSuite ;
+  rdf:type owl:NamedIndividual ;
+  msp:conformanceClass <https://standards.isotc211.org/iso19131/-/2/conf/content> ;
+  msp:conformanceClass <https://standards.isotc211.org/iso19131/-/2/conf/xml> ;
+  msp:requirementSuite :RS ;
+  rdfs:label "ISO 19131:2020 Abstract Test Suite"@en ;
+.
+:MS
+  rdf:type msp:ModularSpecification ;
+  rdf:type owl:NamedIndividual ;
+  msp:requirementSuite :RS ;
+  msp:testSuite :ATS ;
+  rdfs:label "ISO 19131:2020 Modular Specification"^^rdf:langString ;
+.
+:ModularSpecification
+  rdf:type owl:Ontology ;
+  rdfs:label "ISO 19131:2020 Modular specification"@en ;
+  owl:imports <http://def.isotc211.org/iso19105/2021/ModularSpecification> ;
+  owl:versionInfo 20210519 ;
+.
+:RS
+  rdf:type msp:RequirementSuite ;
+  rdf:type owl:NamedIndividual ;
+  msp:requirementsClass <https://standards.isotc211.org/iso19131/-/2/rec/optionalContent> ;
+  msp:requirementsClass <https://standards.isotc211.org/iso19131/-/2/req/content> ;
+  msp:requirementsClass <https://standards.isotc211.org/iso19131/-/2/req/xml> ;
+  rdfs:label "ISO 19131:2020 Requirements Suite"@en ;
+.
+<https://standards.isotc211.org/iso19131/-/2/conf/content>
+  rdf:type msp:ConformanceClass ;
+  rdf:type owl:NamedIndividual ;
+  msp:URI "https://standards.isotc211.org/iso19131/-/2/conf/content"^^xsd:anyURI ;
+  msp:name "content" ;
+  msp:requirementsClass <https://standards.isotc211.org/iso19131/-/2/req/content> ;
+  msp:standardizationTarget "Instance of a data product specification, regardless of data encoding" ;
+  msp:testCase <https://standards.isotc211.org/iso19131/-/2/conf/content/allContent> ;
+  msp:text "The conformance class for the content of a data product specification" ;
+  rdfs:label "Conformance class  for the content of a data product specification"^^rdf:langString ;
+.
+<https://standards.isotc211.org/iso19131/-/2/conf/content/allContent>
+  rdf:type msp:AbstractTestCase ;
+  msp:URI "https://standards.isotc211.org/iso19131/-/2/conf/content/allContent"^^xsd:anyURI ;
+  msp:name "allContent"^^xsd:Name ;
+  msp:requirement <https://standards.isotc211.org/19131/-/2/req/content/additional-content> ;
+  msp:requirement <https://standards.isotc211.org/19131/-/2/req/content/additional-model> ;
+  msp:requirement <https://standards.isotc211.org/19131/-/2/req/content/capture-model> ;
+  msp:requirement <https://standards.isotc211.org/19131/-/2/req/content/capture-scope> ;
+  msp:requirement <https://standards.isotc211.org/19131/-/2/req/content/content-model> ;
+  msp:requirement <https://standards.isotc211.org/19131/-/2/req/content/content-scope> ;
+  msp:requirement <https://standards.isotc211.org/19131/-/2/req/content/delivery-model> ;
+  msp:requirement <https://standards.isotc211.org/19131/-/2/req/content/delivery-scope> ;
+  msp:requirement <https://standards.isotc211.org/19131/-/2/req/content/delivery-specification> ;
+  msp:requirement <https://standards.isotc211.org/19131/-/2/req/content/extent> ;
+  msp:requirement <https://standards.isotc211.org/19131/-/2/req/content/identification-model> ;
+  msp:requirement <https://standards.isotc211.org/19131/-/2/req/content/maintenance-model> ;
+  msp:requirement <https://standards.isotc211.org/19131/-/2/req/content/maintenance-scope> ;
+  msp:requirement <https://standards.isotc211.org/19131/-/2/req/content/maintenanceupdateFrequency> ;
+  msp:requirement <https://standards.isotc211.org/19131/-/2/req/content/metadata-model> ;
+  msp:requirement <https://standards.isotc211.org/19131/-/2/req/content/metadata-scope> ;
+  msp:requirement <https://standards.isotc211.org/19131/-/2/req/content/portrayal-model> ;
+  msp:requirement <https://standards.isotc211.org/19131/-/2/req/content/portrayal-scope> ;
+  msp:requirement <https://standards.isotc211.org/19131/-/2/req/content/quality-level> ;
+  msp:requirement <https://standards.isotc211.org/19131/-/2/req/content/quality-model> ;
+  msp:requirement <https://standards.isotc211.org/19131/-/2/req/content/quality-scope> ;
+  msp:requirement <https://standards.isotc211.org/19131/-/2/req/content/reference-model> ;
+  msp:requirement <https://standards.isotc211.org/19131/-/2/req/content/reference-scope> ;
+  msp:requirement <https://standards.isotc211.org/19131/-/2/req/content/scope-cover> ;
+  msp:requirement <https://standards.isotc211.org/19131/-/2/req/content/scope-identification> ;
+  msp:requirement <https://standards.isotc211.org/19131/-/2/req/content/scope-model> ;
+  msp:requirement <https://standards.isotc211.org/19131/-/2/req/content/specification-language> ;
+  msp:requirement <https://standards.isotc211.org/19131/-/2/req/content/specification-model> ;
+  msp:requirement <https://standards.isotc211.org/19131/-/2/req/content/specification-scope> ;
+  msp:testMethod """Identify the individual objects and their attributes and associations to other objects. Verify that each such element is in conformance with multiplicity and data type as expressed in the UML model.
+For each individual object check for additional requirements beyond the semantics in the model. Verify that each such element meets the specified criteria.""" ;
+  msp:testPurpose "Verify that the content of a data product specification conforms to the UML model and additional requirements related to elements in the UML model." ;
+  msp:testType "Basic" ;
+  msp:text "Conformance test for all content of a data product specification" ;
+  rdfs:label "Conformance test for all content of a data product specification" ;
+.
+<https://standards.isotc211.org/iso19131/-/2/conf/xml>
+  rdf:type msp:ConformanceClass ;
+  rdf:type owl:NamedIndividual ;
+  msp:URI "https://standards.isotc211.org/iso19131/-/2/conf/xml"^^xsd:anyURI ;
+  msp:dependency <https://standards.isotc211.org/iso19131/-/2/conf/content> ;
+  msp:name "xml" ;
+  msp:requirementsClass <https://standards.isotc211.org/iso19131/-/2/req/xml> ;
+  msp:standardizationTarget "XML document representing a data product specification" ;
+  msp:testCase <https://standards.isotc211.org/iso19131/-/2/conf/xml/xmlEncoding> ;
+  msp:text "The conformance class for the XML representation of a data product specification" ;
+  rdfs:label "Conformance class for XML encoding of a data product specification"^^rdf:langString ;
+.
+<https://standards.isotc211.org/iso19131/-/2/conf/xml/xmlEncoding>
+  rdf:type msp:AbstractTestCase ;
+  msp:URI "https://standards.isotc211.org/iso19131/-/2/conf/xml/xmlEncoding"^^xsd:anyURI ;
+  msp:name "xmlEncoding"^^xsd:Name ;
+  msp:requirement <https://standards.isotc211.org/iso19131/-/2/req/xml/xml-encoding> ;
+  msp:testMethod "Validate the XML document using the XML schema https://schemas.isotc211.org/19131/-/dps/2.0/dps.xsd." ;
+  msp:testPurpose "Verify the syntax of a data product specification in the form of an XML document." ;
+  msp:testType "Basic" ;
+  msp:text "Conformance test for XML encoding" ;
+  rdfs:label "Conformance test for XML encoding" ;
+.
+<https://standards.isotc211.org/iso19131/-/2/rec/optionalContent>
+  rdf:type msp:RequirementsClass ;
+  msp:URI "https://standards.isotc211.org/19131/-/2/rec/optionalContent"^^xsd:anyURI ;
+  msp:name "optionalContent"^^xsd:Name ;
+  msp:requirement <https://standards.isotc211.org/19131/-/2/rec/optionalContent/contentapplication> ;
+  msp:requirement <https://standards.isotc211.org/19131/-/2/rec/optionalContent/contentcomplete> ;
+  msp:requirement <https://standards.isotc211.org/19131/-/2/rec/optionalContent/contentcoverage> ;
+  msp:requirement <https://standards.isotc211.org/19131/-/2/rec/optionalContent/contentfeatures> ;
+  msp:requirement <https://standards.isotc211.org/19131/-/2/rec/optionalContent/dps-layout> ;
+  msp:requirement <https://standards.isotc211.org/19131/-/2/rec/optionalContent/metadataminimum> ;
+  msp:requirement <https://standards.isotc211.org/19131/-/2/rec/optionalContent/useCase> ;
+  msp:text "Recommendations class for the content of a data product specification" ;
+  rdfs:label "Recommendations class for the content of a data product specification" ;
+.
+<https://standards.isotc211.org/iso19131/-/2/req/content>
+  rdf:type msp:RequirementsClass ;
+  rdf:type owl:NamedIndividual ;
+  msp:URI "https://standards.isotc211.org/iso19131/-/2/req/content"^^xsd:anyURI ;
+  msp:name "content" ;
+  msp:requirement <https://standards.isotc211.org/19131/-/2/req/content/additional-content> ;
+  msp:requirement <https://standards.isotc211.org/19131/-/2/req/content/additional-model> ;
+  msp:requirement <https://standards.isotc211.org/19131/-/2/req/content/capture-model> ;
+  msp:requirement <https://standards.isotc211.org/19131/-/2/req/content/capture-scope> ;
+  msp:requirement <https://standards.isotc211.org/19131/-/2/req/content/content-model> ;
+  msp:requirement <https://standards.isotc211.org/19131/-/2/req/content/content-scope> ;
+  msp:requirement <https://standards.isotc211.org/19131/-/2/req/content/delivery-model> ;
+  msp:requirement <https://standards.isotc211.org/19131/-/2/req/content/delivery-scope> ;
+  msp:requirement <https://standards.isotc211.org/19131/-/2/req/content/delivery-specification> ;
+  msp:requirement <https://standards.isotc211.org/19131/-/2/req/content/extent> ;
+  msp:requirement <https://standards.isotc211.org/19131/-/2/req/content/identification-model> ;
+  msp:requirement <https://standards.isotc211.org/19131/-/2/req/content/maintenance-model> ;
+  msp:requirement <https://standards.isotc211.org/19131/-/2/req/content/maintenance-scope> ;
+  msp:requirement <https://standards.isotc211.org/19131/-/2/req/content/maintenanceupdateFrequency> ;
+  msp:requirement <https://standards.isotc211.org/19131/-/2/req/content/metadata-model> ;
+  msp:requirement <https://standards.isotc211.org/19131/-/2/req/content/metadata-scope> ;
+  msp:requirement <https://standards.isotc211.org/19131/-/2/req/content/portrayal-model> ;
+  msp:requirement <https://standards.isotc211.org/19131/-/2/req/content/portrayal-scope> ;
+  msp:requirement <https://standards.isotc211.org/19131/-/2/req/content/quality-level> ;
+  msp:requirement <https://standards.isotc211.org/19131/-/2/req/content/quality-model> ;
+  msp:requirement <https://standards.isotc211.org/19131/-/2/req/content/quality-scope> ;
+  msp:requirement <https://standards.isotc211.org/19131/-/2/req/content/reference-model> ;
+  msp:requirement <https://standards.isotc211.org/19131/-/2/req/content/reference-scope> ;
+  msp:requirement <https://standards.isotc211.org/19131/-/2/req/content/scope-cover> ;
+  msp:requirement <https://standards.isotc211.org/19131/-/2/req/content/scope-identification> ;
+  msp:requirement <https://standards.isotc211.org/19131/-/2/req/content/scope-model> ;
+  msp:requirement <https://standards.isotc211.org/19131/-/2/req/content/specification-language> ;
+  msp:requirement <https://standards.isotc211.org/19131/-/2/req/content/specification-model> ;
+  msp:requirement <https://standards.isotc211.org/19131/-/2/req/content/specification-scope> ;
+  msp:text "Requirements class for the content of a data product specification" ;
+  rdfs:label "Requirements class for the content of a data product specification" ;
+.
+<https://standards.isotc211.org/iso19131/-/2/req/xml>
+  rdf:type msp:RequirementsClass ;
+  rdf:type owl:NamedIndividual ;
+  msp:URI "https://standards.isotc211.org/iso19131/-/2/req/xml"^^xsd:anyURI ;
+  msp:dependency <https://standards.isotc211.org/iso19131/-/2/req/content> ;
+  msp:name "xml" ;
+  msp:requirement <https://standards.isotc211.org/iso19131/-/2/req/xml/xml-encoding> ;
+  msp:text "Requirements class for the XML encoding of a data product specification" ;
+  rdfs:label "Requirements class for the XML encoding of a data product specification" ;
+.
+<https://standards.isotc211.org/iso19131/-/2/req/xml/xml-encoding>
+  rdf:type msp:Requirement ;
+  rdf:type owl:NamedIndividual ;
+  msp:URI "https://standards.isotc211.org/iso19131/-/2/req/xml/xml-encoding"^^xsd:anyURI ;
+  msp:name "xml-encoding"^^xsd:Name ;
+  msp:text "A data product specification XML document shall be conformant with the XML schema https://schemas.isotc211.org/19131/-/dps/2.0/dps.xsd." ;
+.

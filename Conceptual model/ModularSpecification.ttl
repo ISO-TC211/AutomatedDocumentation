@@ -1,0 +1,229 @@
+# baseURI: http://def.isotc211.org/iso19105/2021/ModularSpecification
+
+@prefix : <http://def.isotc211.org/iso19105/2021/ModularSpecification#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://def.isotc211.org/iso19105/2021/ModularSpecification>
+  rdf:type owl:Ontology ;
+  dcterms:abstract "Tentative model for describing a modular specification with normative statements needed for conformance and testing."@en ;
+  dcterms:description "ISO 19105 Model for conformance and testing"@en ;
+  rdfs:label "ISO 19105 Model for conformance and testing"@en ;
+  owl:versionInfo "2021-05-19" ;
+.
+:AbstractTestCase
+  rdf:type owl:Class ;
+  rdfs:subClassOf :IdentifiedObject ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass :Requirement ;
+      owl:onProperty :requirement ;
+    ] ;
+.
+:AbstractTestSuite
+  rdf:type owl:Class ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass :ConformanceClass ;
+      owl:onProperty :conformanceClass ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onClass :RequirementSuite ;
+      owl:onProperty :requirementSuite ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+.
+:ConformanceClass
+  rdf:type owl:Class ;
+  rdfs:subClassOf :IdentifiedObject ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass :AbstractTestCase ;
+      owl:onProperty :testCase ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onClass :RequirementsClass ;
+      owl:onProperty :requirementsClass ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty :standardizationTarget ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+.
+:IdentifiedObject
+  rdf:type owl:Class ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onDataRange xsd:anyURI ;
+      owl:onProperty :URI ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty :name ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty :text ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+.
+:ModularSpecification
+  rdf:type owl:Class ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onClass :AbstractTestSuite ;
+      owl:onProperty :testSuite ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onClass :RequirementSuite ;
+      owl:onProperty :requirementSuite ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+.
+:NormativeStatement
+  rdf:type owl:Class ;
+  rdfs:subClassOf :IdentifiedObject ;
+.
+:Permission
+  rdf:type owl:Class ;
+  rdfs:subClassOf :NormativeStatement ;
+.
+:Recommendation
+  rdf:type owl:Class ;
+  rdfs:subClassOf :NormativeStatement ;
+.
+:Requirement
+  rdf:type owl:Class ;
+  rdfs:subClassOf :NormativeStatement ;
+.
+:RequirementSuite
+  rdf:type owl:Class ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass :RequirementsClass ;
+      owl:onProperty :requirementsClass ;
+    ] ;
+.
+:RequirementsClass
+  rdf:type owl:Class ;
+  rdfs:subClassOf :IdentifiedObject ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass :NormativeStatement ;
+      owl:onProperty :requirement ;
+    ] ;
+.
+:URI
+  rdf:type owl:DatatypeProperty ;
+  rdfs:range xsd:anyURI ;
+  rdfs:subPropertyOf owl:topDataProperty ;
+.
+:conformanceClass
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain :AbstractTestSuite ;
+  rdfs:range :ConformanceClass ;
+.
+:dependency
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain :ConformanceClass ;
+  rdfs:domain :RequirementsClass ;
+  rdfs:range :ConformanceClass ;
+  rdfs:range :RequirementsClass ;
+.
+:externalReference
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain :NormativeStatement ;
+  rdfs:range xsd:anyURI ;
+  rdfs:subPropertyOf owl:topDataProperty ;
+.
+:name
+  rdf:type owl:DatatypeProperty ;
+  rdfs:range xsd:Name ;
+  rdfs:subPropertyOf owl:topDataProperty ;
+.
+:requirement
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain :AbstractTestCase ;
+  rdfs:domain :RequirementsClass ;
+  rdfs:range :NormativeStatement ;
+  rdfs:subPropertyOf owl:topObjectProperty ;
+.
+:requirementSuite
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain :AbstractTestSuite ;
+  rdfs:domain :ModularSpecification ;
+  rdfs:range :RequirementSuite ;
+.
+:requirementsClass
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain :ConformanceClass ;
+  rdfs:domain :RequirementSuite ;
+  rdfs:range :RequirementsClass ;
+.
+:standardizationTarget
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain :ConformanceClass ;
+  rdfs:range xsd:string ;
+.
+:subStatement
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain :NormativeStatement ;
+  rdfs:range :NormativeStatement ;
+.
+:testCase
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain :ConformanceClass ;
+  rdfs:range :AbstractTestCase ;
+.
+:testMethod
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain :AbstractTestCase ;
+  rdfs:range xsd:string ;
+.
+:testPurpose
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain :AbstractTestCase ;
+  rdfs:range xsd:string ;
+.
+:testSuite
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain :ModularSpecification ;
+  rdfs:range :AbstractTestSuite ;
+.
+:testType
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain :AbstractTestCase ;
+  rdfs:range xsd:string ;
+.
+:text
+  rdf:type owl:DatatypeProperty ;
+  rdfs:range xsd:string ;
+  rdfs:subPropertyOf owl:topDataProperty ;
+.
+dcterms:abstract
+  rdf:type owl:AnnotationProperty ;
+.
+dcterms:description
+  rdf:type owl:AnnotationProperty ;
+.
