@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="windows-1252"?>
 <UMLProfile profiletype="uml2">
-	<Documentation id="4060D330-A" name="ISO/TC 211 Conformance and testing" version="20210519" notes="ISO/TC 211 Conformance and testing"/>
+	<Documentation id="4060D330-A" name="ISO/TC 211 Conformance and testing" version="0.99" notes="ISO/TC 211 Conformance and testing"/>
 	<Content>
 		<Stereotypes>
 			<Stereotype name="Requirement" notes="" cx="202" cy="88" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
@@ -68,12 +68,15 @@
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="ConformanceClass" notes="" cx="124" cy="53" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+			<Stereotype name="ConformanceClass" notes="" cx="180" cy="53" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
 				<AppliesTo>
 					<Apply type="Package">
 						<Property name="URI" value=""/>
 					</Apply>
 				</AppliesTo>
+				<TaggedValues>
+					<Tag name="standardizationTarget" type="CharacterString" description="The type of standardization target for this conformance clas" unit="" values="" default=""/>
+				</TaggedValues>
 			</Stereotype>
 			<Stereotype name="RequirementsSuite" notes="" cx="124" cy="52" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
 				<AppliesTo>
