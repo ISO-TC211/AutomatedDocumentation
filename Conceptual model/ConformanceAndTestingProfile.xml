@@ -1,60 +1,24 @@
 <?xml version="1.0" encoding="windows-1252"?>
 <UMLProfile profiletype="uml2">
-	<Documentation id="4060D330-A" name="ISO/TC 211 Conformance and testing" version="0.99" notes="Changed from package to class. "/>
+	<Documentation id="8B0B9E82-2" name="ISO/TC 211 Conformance and testing" version="1.0" notes="ISO/TC 211 Conformance and testing"/>
 	<Content>
 		<Stereotypes>
-			<Stereotype name="Requirement" notes="" cx="202" cy="88" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+			<Stereotype name="AbstractTestCase" notes="" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
 				<AppliesTo>
 					<Apply type="Class">
 						<Property name="isActive" value=""/>
 					</Apply>
 				</AppliesTo>
 				<TaggedValues>
-					<Tag name="URI" type="URI" description="identifier which references elsewhere the object's defining information; alternatively an identifier by which this object can be referenced" unit="" values="" default=""/>
-					<Tag name="text" type="CharacterString" description="" unit="" values="" default=""/>
 					<Tag name="externalReference" type="URI" description="reference to an external description" unit="" values="" default=""/>
-				</TaggedValues>
-			</Stereotype>
-			<Stereotype name="Recommendation" notes="" cx="202" cy="88" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
-				<AppliesTo>
-					<Apply type="Class">
-						<Property name="isActive" value=""/>
-					</Apply>
-				</AppliesTo>
-				<TaggedValues>
-					<Tag name="URI" type="URI" description="identifier which references elsewhere the object's defining information; alternatively an identifier by which this object can be referenced" unit="" values="" default=""/>
-					<Tag name="text" type="CharacterString" description="" unit="" values="" default=""/>
-					<Tag name="externalReference" type="URI" description="reference to an external description" unit="" values="" default=""/>
-				</TaggedValues>
-			</Stereotype>
-			<Stereotype name="Permission" notes="" cx="202" cy="88" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
-				<AppliesTo>
-					<Apply type="Class">
-						<Property name="isActive" value=""/>
-					</Apply>
-				</AppliesTo>
-				<TaggedValues>
-					<Tag name="URI" type="URI" description="identifier which references elsewhere the object's defining information; alternatively an identifier by which this object can be referenced" unit="" values="" default=""/>
-					<Tag name="text" type="CharacterString" description="" unit="" values="" default=""/>
-					<Tag name="externalReference" type="URI" description="reference to an external description" unit="" values="" default=""/>
-				</TaggedValues>
-			</Stereotype>
-			<Stereotype name="AbstractTestCase" notes="" cx="202" cy="114" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
-				<AppliesTo>
-					<Apply type="Class">
-						<Property name="isActive" value=""/>
-					</Apply>
-				</AppliesTo>
-				<TaggedValues>
-					<Tag name="URI" type="URI" description="identifier which references elsewhere the object's defining information; alternatively an identifier by which this object can be referenced" unit="" values="" default=""/>
-					<Tag name="text" type="CharacterString" description="" unit="" values="" default=""/>
-					<Tag name="externalReference" type="URI" description="reference to an external description" unit="" values="" default=""/>
-					<Tag name="testPurpose" type="CharacterString" description="comments on or information about this object, including data source information" unit="" values="" default=""/>
 					<Tag name="testMethod" type="CharacterString" description="comments on or information about this object, including data source information" unit="" values="" default=""/>
+					<Tag name="testPurpose" type="CharacterString" description="comments on or information about this object, including data source information" unit="" values="" default=""/>
 					<Tag name="testType" type="CharacterString" description="comments on or information about this object, including data source information" unit="" values="" default=""/>
+					<Tag name="text" type="CharacterString" description="" unit="" values="" default=""/>
+					<Tag name="URI" type="URI" description="identifier which references elsewhere the object's defining information; alternatively an identifier by which this object can be referenced" unit="" values="" default=""/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="ModularSpecification" notes="" cx="124" cy="52" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+			<Stereotype name="AbstractTestSuite" notes="" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
 				<AppliesTo>
 					<Apply type="Class">
 						<Property name="isActive" value=""/>
@@ -64,7 +28,7 @@
 					<Tag name="URI" type="URI" description="identifier which references elsewhere the object's defining information; alternatively an identifier by which this object can be referenced" unit="" values="" default=""/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="AbstractTestSuite" notes="" cx="124" cy="52" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+			<Stereotype name="ConformanceClass" notes="" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
 				<AppliesTo>
 					<Apply type="Class">
 						<Property name="isActive" value=""/>
@@ -74,18 +38,7 @@
 					<Tag name="URI" type="URI" description="identifier which references elsewhere the object's defining information; alternatively an identifier by which this object can be referenced" unit="" values="" default=""/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="ConformanceClass" notes="" cx="180" cy="62" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
-				<AppliesTo>
-					<Apply type="Class">
-						<Property name="isActive" value=""/>
-					</Apply>
-				</AppliesTo>
-				<TaggedValues>
-					<Tag name="URI" type="URI" description="identifier which references elsewhere the object's defining information; alternatively an identifier by which this object can be referenced" unit="" values="" default=""/>
-					<Tag name="standardizationTarget" type="CharacterString" description="The type of standardization target for this conformance clas" unit="" values="" default=""/>
-				</TaggedValues>
-			</Stereotype>
-			<Stereotype name="RequirementsSuite" notes="" cx="124" cy="52" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+			<Stereotype name="ExternalSpecification" notes="" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
 				<AppliesTo>
 					<Apply type="Class">
 						<Property name="isActive" value=""/>
@@ -95,7 +48,7 @@
 					<Tag name="URI" type="URI" description="identifier which references elsewhere the object's defining information; alternatively an identifier by which this object can be referenced" unit="" values="" default=""/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="RequirementsClass" notes="" cx="124" cy="53" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+			<Stereotype name="ModularSpecification" notes="" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
 				<AppliesTo>
 					<Apply type="Class">
 						<Property name="isActive" value=""/>
@@ -105,7 +58,43 @@
 					<Tag name="URI" type="URI" description="identifier which references elsewhere the object's defining information; alternatively an identifier by which this object can be referenced" unit="" values="" default=""/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="ExternalSpecification" notes="" cx="124" cy="53" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+			<Stereotype name="Permission" notes="" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="Class">
+						<Property name="isActive" value=""/>
+					</Apply>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="externalReference" type="URI" description="reference to an external description" unit="" values="" default=""/>
+					<Tag name="text" type="CharacterString" description="" unit="" values="" default=""/>
+					<Tag name="URI" type="URI" description="identifier which references elsewhere the object's defining information; alternatively an identifier by which this object can be referenced" unit="" values="" default=""/>
+				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="Recommendation" notes="" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="Class">
+						<Property name="isActive" value=""/>
+					</Apply>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="externalReference" type="URI" description="reference to an external description" unit="" values="" default=""/>
+					<Tag name="text" type="CharacterString" description="" unit="" values="" default=""/>
+					<Tag name="URI" type="URI" description="identifier which references elsewhere the object's defining information; alternatively an identifier by which this object can be referenced" unit="" values="" default=""/>
+				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="Requirement" notes="" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="Class">
+						<Property name="isActive" value=""/>
+					</Apply>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="externalReference" type="URI" description="reference to an external description" unit="" values="" default=""/>
+					<Tag name="text" type="CharacterString" description="" unit="" values="" default=""/>
+					<Tag name="URI" type="URI" description="identifier which references elsewhere the object's defining information; alternatively an identifier by which this object can be referenced" unit="" values="" default=""/>
+				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="RequirementsClass" notes="" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
 				<AppliesTo>
 					<Apply type="Class">
 						<Property name="isActive" value=""/>
@@ -115,7 +104,17 @@
 					<Tag name="URI" type="URI" description="identifier which references elsewhere the object's defining information; alternatively an identifier by which this object can be referenced" unit="" values="" default=""/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="SpecificationTarget" notes="" cx="124" cy="52" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+			<Stereotype name="RequirementsSuite" notes="" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="Class">
+						<Property name="isActive" value=""/>
+					</Apply>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="URI" type="URI" description="identifier which references elsewhere the object's defining information; alternatively an identifier by which this object can be referenced" unit="" values="" default=""/>
+				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="SpecificationTarget" notes="" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
 				<AppliesTo>
 					<Apply type="Class">
 						<Property name="isActive" value=""/>
