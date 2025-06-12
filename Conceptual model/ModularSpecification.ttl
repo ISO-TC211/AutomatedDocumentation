@@ -66,6 +66,12 @@ dcterms:description rdf:type owl:AnnotationProperty .
                    rdfs:range :RequirementsClass .
 
 
+###  http://def.isotc211.org/iso19105/2021/ModularSpecification#specificationTarget
+:specificationTarget rdf:type owl:ObjectProperty ;
+                     rdfs:domain :RequirementsClass ;
+                     rdfs:range <http://def.isotc211.org/iso19105/2021/ModularSpecification/SpecificationTarget> .
+
+
 ###  http://def.isotc211.org/iso19105/2021/ModularSpecification#subStatement
 :subStatement rdf:type owl:ObjectProperty ;
               rdfs:domain :NormativeStatement ;
@@ -105,12 +111,6 @@ dcterms:description rdf:type owl:AnnotationProperty .
 :name rdf:type owl:DatatypeProperty ;
       rdfs:subPropertyOf owl:topDataProperty ;
       rdfs:range xsd:Name .
-
-
-###  http://def.isotc211.org/iso19105/2021/ModularSpecification#standardizationTarget
-:standardizationTarget rdf:type owl:DatatypeProperty ;
-                       rdfs:domain :ConformanceClass ;
-                       rdfs:range xsd:string .
 
 
 ###  http://def.isotc211.org/iso19105/2021/ModularSpecification#testMethod
@@ -179,11 +179,6 @@ dcterms:description rdf:type owl:AnnotationProperty .
                                     owl:onProperty :requirementsClass ;
                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                     owl:onClass :RequirementsClass
-                                  ] ,
-                                  [ rdf:type owl:Restriction ;
-                                    owl:onProperty :standardizationTarget ;
-                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                    owl:onDataRange xsd:string
                                   ] ;
                   rdfs:label "Conformance Class" .
 
@@ -197,11 +192,6 @@ dcterms:description rdf:type owl:AnnotationProperty .
                                   ] ,
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty :name ;
-                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                    owl:onDataRange xsd:string
-                                  ] ,
-                                  [ rdf:type owl:Restriction ;
-                                    owl:onProperty :text ;
                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                     owl:onDataRange xsd:string
                                   ] ;
@@ -269,6 +259,11 @@ dcterms:description rdf:type owl:AnnotationProperty .
                                      owl:onProperty :requirement ;
                                      owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                      owl:onClass :NormativeStatement
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :specificationTarget ;
+                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onClass <http://def.isotc211.org/iso19105/2021/ModularSpecification/SpecificationTarget>
                                    ] ;
                    rdfs:label "Requirements Class" .
 
